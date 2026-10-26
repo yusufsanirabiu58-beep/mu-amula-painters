@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ha">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mu Amula Painting And Decoration</title>
+<style>
+:root{--navy:#10253f;--blue:#1e5aa8;--gold:#f4b942;--bg:#f4f6f9;--ink:#172334;--muted:#64748b;--green:#168451}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:var(--bg);color:var(--ink)}
+header{background:linear-gradient(135deg,#10253f,#245b92);color:white;padding:22px 18px 26px;border-radius:0 0 22px 22px}
+.brand{display:flex;gap:12px;align-items:center}.logo{width:48px;height:48px;background:var(--gold);color:#10253f;border-radius:14px;display:grid;place-items:center;font-size:25px;font-weight:bold}
+h1{font-size:20px;margin:0 0 5px}header p{margin:0;color:#e1ebf7;font-size:13px}
+.wrap{max-width:760px;margin:auto}.lang{margin-left:auto;background:#ffffff22;border:1px solid #ffffff66;color:white;border-radius:9px;padding:8px}
+main{padding:16px}.welcome{background:white;border-radius:16px;padding:17px;box-shadow:0 4px 16px #10253f0b}
+.welcome h2{margin:0 0 8px;font-size:19px}.welcome p{margin:0;color:var(--muted);line-height:1.5;font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+.tile{background:white;border-radius:14px;padding:15px;border:1px solid #e5eaf0}.tile .ico{font-size:24px}.tile strong{display:block;margin:8px 0 5px}.tile small{color:var(--muted);line-height:1.4}
+.section{margin-top:20px}.section h2{font-size:17px;margin:0 0 10px}.price{display:flex;justify-content:space-between;align-items:center;background:white;border:1px solid #e5eaf0;border-radius:12px;padding:13px;margin:8px 0}.price b{color:var(--blue)}.tag{font-size:11px;background:#e5f5ec;color:var(--green);padding:5px 8px;border-radius:20px}
+nav{position:sticky;bottom:0;display:flex;background:#fff;border-top:1px solid #e5eaf0;padding:8px 4px;gap:3px}nav button{flex:1;background:none;border:0;padding:8px 2px;color:#64748b;font-size:11px;border-radius:9px}nav button.active{background:#eaf1fb;color:#174f91;font-weight:bold}
+button{cursor:pointer} .primary{background:var(--blue);color:white;border:0;border-radius:10px;padding:12px 14px;font-weight:bold;width:100%;margin-top:10px}
+.note{font-size:12px;color:var(--muted);line-height:1.5;margin-top:12px}
+.panel{display:none}.panel.active{display:block}
+input,select{width:100%;padding:12px;border:1px solid #d5dde7;border-radius:9px;margin:6px 0 12px;font-size:14px;background:white}
+label{font-size:13px;font-weight:bold}.adminhead{background:#eaf1fb;border-radius:12px;padding:12px;font-size:13px;color:#174f91}
+@media(min-width:620px){main{padding:22px}.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+</style>
+</head>
+<body><div class="wrap">
+<header><div class="brand"><div class="logo">M</div><div><h1>Mu Amula Painting And Decoration</h1><p>Fenti • P.O.P • Interior Design</p></div><button class="lang" onclick="toggleLang()">HA / EN</button></div></header>
+<main>
+<section id="home" class="panel active">
+<div class="welcome"><span class="tag">SABON TSARI</span><h2 id="welcomeTitle">Nemo ƙwararren mai sana'a cikin sauƙi</h2><p id="welcomeText">Haɗa kwastomomi da masu fenti, P.O.P da interior decoration a wuri guda.</p><button class="primary" onclick="show('workers')">Nemi Ma'aikaci / Find a Worker</button></div>
+<div class="grid">
+<div class="tile"><div class="ico">🎨</div><strong>Painting</strong><small>Fenti na ciki da wajen gida, gyara da screeding.</small></div>
+<div class="tile"><div class="ico">🏠</div><strong>P.O.P & Decoration</strong><small>Rufin POP da ƙawata cikin gida.</small></div>
+<div class="tile"><div class="ico">🧰</div><strong>Masu Sana'a</strong><small>Profile, hotunan aiki da matsayin neman aiki.</small></div>
+</div>
+<div class="section"><h2>Farashin Tallace-tallace</h2>
+<div class="price"><span>Talla na kwana 7</span><b>₦1,000</b></div>
+<div class="price"><span>Talla na kwana 30</span><b>₦3,000</b></div>
+<div class="price"><span>Talla ta musamman a saman shafi · kwana 30</span><b>₦5,000</b></div>
+</div>
+<p class="note">Wannan samfurin gwaji ne. Ba a haɗa biyan kuɗi, database ko asusun Admin na gaske ba tukuna.</p>
+</section>
+<section id="workers" class="panel">
+<div class="welcome"><h2>Nemi Ma'aikaci</h2><p>Bincika masu fenti da masu P.O.P ta sana'a ko yanki.</p></div>
+<div class="section"><label>Sana'a / Trade</label><select><option>Duk sana'o'i</option><option>Painting</option><option>P.O.P</option><option>Interior Decoration</option><option>Screeding</option></select><label>Yanki / Location</label><input placeholder="Misali: Sharada Phase 1"><div class="tile"><strong>🟢 FREE — Yana neman aiki</strong><small>Za a nuna bayanan membobin da Admin ya amince da su. Lambobin waya za su kasance a ɓoye har sai an tabbatar da biyan kuɗin da ya dace.</small></div></div>
+</section>
+<section id="jobs" class="panel">
+<div class="welcome"><h2>Ayyuka / Jobs</h2><p>Wurin haɗa masu neman aiki da kwastomomi.</p></div>
+<div class="tile" style="margin-top:12px"><strong>Tsarin aikin da aka tsara</strong><small>Za a ƙara wallafa aiki, duba buƙatu, sanarwa da tsarin biyan kuɗin memba bayan an haɗa database.</small></div>
+</section>
+<section id="payments" class="panel">
+<div class="welcome"><h2>Biyan Kuɗi / Payments</h2><p>Za a nuna kuɗin rajista, buɗe lamba, kuɗin aikin memba da tallace-tallace a rabe.</p></div>
+<div class="price"><span>Rajistar memba · sau ɗaya</span><b>₦500</b></div><div class="price"><span>Buɗe lambar waya</span><b>₦200</b></div><div class="price"><span>Kuɗin damar aikin memba</span><b>₦200</b></div>
+<p class="note">Biyan kuɗi na gaske zai buƙaci haɗa payment gateway da tabbatarwa daga uwar garken (server); wannan shafi ba ya karɓar kuɗi.</p>
+</section>
+<section id="profile" class="panel">
+<div class="welcome"><h2>Profile / Bayanan Memba</h2><p>Saka hoton profile zaɓi ne. Za a iya ƙara hotunan ayyuka da bayanan sana'a.</p></div>
+<div class="section"><label>Cikakken suna</label><input placeholder="Sunan memba"><label>Imel</label><input type="email" placeholder="email@example.com"><label>Sana'a</label><select><option>Painting</option><option>P.O.P</option><option>Interior Decoration</option></select><label>Hoton profile (zaɓi ne)</label><input type="file" accept="image/*"><button class="primary" onclick="alert('Wannan demo ne kawai; ba a adana bayanan ba tukuna.')">Ajiye (Demo)</button></div>
+</section>
+<section id="admin" class="panel">
+<div class="welcome"><h2>Admin Dashboard</h2><div class="adminhead">An tsara Admin ɗaya kawai. Wannan allo na demo ne, ba kariyar shiga ta gaske ba.</div></div>
+<div class="grid"><div class="tile"><div class="ico">👥</div><strong>Membobi</strong><small>Amincewa, dakatarwa da gyaran bayanai.</small></div><div class="tile"><div class="ico">💳</div><strong>Kuɗi & Earnings</strong><small>Rajista, buɗe lamba da tallace-tallace.</small></div><div class="tile"><div class="ico">📣</div><strong>Tallace-tallace</strong><small>Duba talla, amincewa da ƙarewar lokaci.</small></div><div class="tile"><div class="ico">🛠️</div><strong>Ayyuka</strong><small>Duba damar aiki da rahotanni.</small></div><div class="tile"><div class="ico">⚙️</div><strong>Settings</strong><small>Hausa/English da farashi.</small></div></div>
+</section>
+</main>
+<nav>
+<button class="active" data-id="home" onclick="show('home',this)">⌂<br>Gida</button>
+<button data-id="workers" onclick="show('workers',this)">👷<br>Ma'aikata</button>
+<button data-id="jobs" onclick="show('jobs',this)">🧱<br>Ayyuka</button>
+<button data-id="payments" onclick="show('payments',this)">₦<br>Biyan kuɗi</button>
+<button data-id="profile" onclick="show('profile',this)">◉<br>Profile</button>
+<button data-id="admin" onclick="show('admin',this)">⚙<br>Admin</button>
+</nav></div>
+<script>
+let english=false;
+function show(id,btn){document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));document.getElementById(id).classList.add('active');document.querySelectorAll('nav button').forEach(b=>b.classList.remove('active'));if(btn)btn.classList.add('active');else document.querySelectorAll('nav button').forEach(b=>{if(b.dataset.id===id)b.classList.add('active')});window.scrollTo(0,0)}
+function toggleLang(){english=!english;document.getElementById('welcomeTitle').textContent=english?'Find skilled workers easily':'Nemo ƙwararren mai sana’a cikin sauƙi';document.getElementById('welcomeText').textContent=english?'Connect customers with painters, POP installers and interior decorators in one place.':'Haɗa kwastomomi da masu fenti, P.O.P da interior decoration a wuri guda.'}
+</script></body></html>
